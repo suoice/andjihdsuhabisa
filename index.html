@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="trial.css">
+    
+    <title>gallery</title>
+</head>
+<body>
+    <div class="header"></div>
+
+    <div class="flower">
+        <img src="1677858178129.png">
+    </div>
+    <div class="daisy">
+        <img src="1682774436496.png">
+    </div>
+    <div id="daisisc">
+        <img src="1682775218731.png">
+    </div>
+    <div class="card_layout">
+        <div class="box box--1">
+            <div class="card-front">
+                <div class="photo" >
+                    <img src="IMG_20230418_230602_625-01.jpeg">
+                </div>
+            </div>
+            <div class="card-back">
+                <p class="title"> message </p>
+            </div>
+        </div>   
+        <div class="box box--2">
+            <div class="card-front">
+                <div class="photo" >
+                    <img src="IMG_20230418_230602_625-01.jpeg">
+                </div>
+            </div>
+            <div class="card-back">
+                <p class="title"> message </p>
+            </div>
+        </div>
+        <div class="box box--3">
+            <div class="card-front">
+                <div class="photo" >
+                    <img src="IMG_20230418_230602_625-01.jpeg">
+                </div>
+            </div>
+            <div class="card-back">
+                <p class="title"> message </p>
+            </div>
+        </div>
+        <div class="box box--4">
+            <div class="card-front">
+                <div class="photo" >
+                    <img src="IMG_20230418_230602_625-01.jpeg">
+                </div>
+            </div>
+            <div class="card-back">
+                <p class="title"> message </p>
+            </div>
+        </div>
+        <div class="box box--5">
+            <div class="card-front">
+                <div class="photo" >
+                    <img src="IMG_20230418_230602_625-01.jpeg">
+                </div>
+            </div>
+            <div class="card-back">
+                <p class="title"> message </p>
+            </div>
+        </div>
+        <div class="box box--6">
+            <div class="card-front">
+                <div class="photo" >
+                    <img src="IMG_20230418_230602_625-01.jpeg">
+                </div>
+            </div>
+            <div class="card-back">
+                <p class="title"> message </p>
+            </div>
+        </div>
+        <div class="box box--7">
+            <div class="card-front">
+                <div class="photo" >
+                    <img src="IMG_20230418_230602_625-01.jpeg">
+                </div>
+            </div>
+            <div class="card-back">
+                <p class="title"> message </p>
+            </div>
+        </div>
+        <div class="box box--8">
+            <div class="card-front">
+                <div class="photo" >
+                    <img src="IMG_20230418_230602_625-01.jpeg">
+                </div>
+            </div>
+            <div class="card-back">
+                <p class="title"> message </p>
+            </div>
+        </div>
+        
+    </div>
+    <button>ela & mico</button> 
+    <ul class="wrapper">
+        <li class="icon facebook">
+            <span class="tooltip"> i </span>
+        </li>
+        <li class="icon twitter">
+            <span class="tooltip">♡ </span>
+            
+        </li>
+        <li class="icon instagram">
+            <span class="tooltip">u</span>
+        </li>
+    </ul>
+    <script>
+        var e = document.getElementById('daisisc');
+        var spin = false;
+        
+        var spinner = function(){
+        e.classList.toggle('running', spin);
+        if (spin) setTimeout(spinner, 2000);
+        }
+        
+        e.onmouseover = function(){
+        spin = true;
+        spinner();
+        };
+        
+        e.onmouseout = function(){
+        spin = false;
+        };
+    </script>
+    
+</body>
+</html>
