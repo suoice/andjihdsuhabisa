@@ -2,8 +2,12 @@ body {
   overflow: scroll;
   background-color: rgb(202, 181, 156);
   overflow-x: hidden;
+  width: 100%;
+  
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 * {
   margin: 0;
   padding: 0;
@@ -14,9 +18,10 @@ body {
 
 .header {
   width: 90rem;
-  height: 15vh;
+  height: 6rem;
   background-image: linear-gradient(0deg, rgba(155,34,195,1) 0%, rgba(253,187,45,1) 100%);
-  position: absolute;
+  position: fixed;
+  
 }
 
 button {
@@ -26,9 +31,9 @@ button {
   cursor: pointer;
   display: flex;
   font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  position: absolute;
+  position: fixed;
   padding: 1rem;
-  font-size: 3vw; /* Adjusted font size */
+  font-size: 40px; /* Adjusted font size */
   font-weight: 700;
   text-decoration: wavy;
   text-transform: lowercase;
@@ -86,21 +91,18 @@ img {
 
 .card_layout {
   width: 80vw; /* Adjusted width */
-  height: 80vh; /* Adjusted height */
+  height: calc(100vh - 10rem); /* Adjusted height */
   color: white;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* Responsive grid columns */
-  grid-template-rows: repeat(auto-fit, minmax(15rem, 1fr)); /* Responsive grid rows */
-  row-gap: 50px; /* Adjusted gap */
+  grid-template-rows: repeat(auto-fit, minmax(20rem, 2fr)); /* Responsive grid rows */
+  row-gap: 5vh; /* Adjusted gap */
   column-gap: 1vw; /* Adjusted gap */
   position: absolute;
   top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 2rem;
-
-
-  
+  transform: translate(-50%, -50%); 
+  z-index: -1;
 }
 
 .box {
@@ -108,13 +110,11 @@ img {
   width: 30vh;
   height: 40vh;
   display: grid;
-
   align-items: center;
   justify-content: center;
   transition: transform 1.2s;
   transform-style: preserve-3d;
   background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
-
   position: relative;
   
 }
@@ -212,39 +212,47 @@ img {
 
 .box--2:hover {
   transform: rotateY(180deg);
+  box-shadow: 7px 5px 56px -10px #C3D900;
 }
 
 .box--3:hover {
   transform: rotateY(180deg);
+  box-shadow: 7px 5px 56px -10px #C3D900;
+
 }
 
 .box--4:hover {
   transform: rotateY(180deg);
+  box-shadow: 7px 5px 56px -10px #C3D900;
 }
 
 .box--5:hover {
   transform: rotateY(180deg);
+  box-shadow: 7px 5px 56px -10px #C3D900;
 }
 
 .box--6:hover {
   transform: rotateY(180deg);
+  box-shadow: 7px 5px 56px -10px #C3D900;
 }
 
 .box--7:hover {
   transform: rotateY(180deg);
+  box-shadow: 7px 5px 56px -10px #C3D900;
 }
 
 .box--8:hover {
   transform: rotateY(180deg);
+  box-shadow: 7px 5px 56px -10px #C3D900;
 }
 
 .wrapper {
   list-style: none;
-  height: 8vh; /* Adjusted height */
+  height: calc(100vh - 20rem); /* Adjusted height */
   padding-top: 16vh; /* Adjusted padding */
   padding-left: 2vw; /* Adjusted padding */
   font-family: "Poppins", sans-serif;
-  position: absolute;
+  position: fixed;
   justify-content: center;
 }
 
@@ -325,11 +333,11 @@ img {
 }
 
 .flower {
-  height: 14vh; /* Adjusted height */
-  width: 14vh; /* Adjusted width */
-  position: absolute;
-  left: 93.5%; /* Adjusted left */
-  top: 1vh; /* Adjusted top */
+  height: 12vh; /* Adjusted height */
+  width: 12vh; /* Adjusted width */
+  position: fixed;
+  right: 1vh; /* Adjusted left */
+  top: 0.5vh; /* Adjusted top */
 }
 
 .flower:hover {
@@ -341,19 +349,20 @@ img {
 .daisy {
   height: 30rem;
   width: 15rem;
-  position: absolute;
+  position: fixed;
   right: -10vh; /* Adjusted left */
-  bottom: 5%;
+  bottom: 0.5%;
   transform: rotateZ(-10deg);
+  z-index: -2;
   
 }
 
 #daisisc {
   height: 10rem;
   width: 10rem;
-  position: absolute;
+  position: fixed;
   padding: 1vh; /* Adjusted padding */
-  top: 60vh; /* Adjusted top */
+  bottom: 10vh; /* Adjusted top */
   left: 1vh; /* Adjusted left */
 }
 
