@@ -1,6 +1,5 @@
 body {
   overflow: scroll;
-  background-color: #AAC8A7;
   overflow-x: hidden;
   width: 100%;
   
@@ -16,10 +15,19 @@ body {
   scroll-behavior: smooth;
 }
 
+.bg {
+    background: url("indieground-vintagepaper-textures-01.jpg");
+    
+    background-repeat: repeat-x;
+    height: 100vh;
+    width: 100vw;
+    z-index: -3;
+    position: fixed;
+}
 .header {
   width: 90rem;
   height: 6rem;
-  background-image: linear-gradient(0deg, rgba(201,219,178,1) 0%, rgba(97,122,85,1) 100%);
+  background: radial-gradient(circle, rgba(167,93,93,1) 6%, rgba(211,117,107,1) 50%, rgba(240,153,125,1) 100%);
   position: fixed;
   
 }
