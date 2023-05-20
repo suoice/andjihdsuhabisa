@@ -1,6 +1,6 @@
 body {
   overflow: scroll;
-  background-color: rgb(202, 181, 156);
+  background-color: #AAC8A7;
   overflow-x: hidden;
   width: 100%;
   
@@ -19,7 +19,7 @@ body {
 .header {
   width: 90rem;
   height: 6rem;
-  background-image: linear-gradient(0deg, rgba(155,34,195,1) 0%, rgba(253,187,45,1) 100%);
+  background-image: linear-gradient(0deg, rgba(201,219,178,1) 0%, rgba(97,122,85,1) 100%);
   position: fixed;
   
 }
