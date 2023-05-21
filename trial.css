@@ -17,8 +17,6 @@ body {
 
 .bg {
     background: url("indieground-vintagepaper-textures-01.jpg");
-    
-    background-repeat: repeat-x;
     height: 100vh;
     width: 100vw;
     z-index: -3;
@@ -28,8 +26,7 @@ body {
   width: 90rem;
   height: 6rem;
   background: radial-gradient(circle, rgba(167,93,93,1) 6%, rgba(211,117,107,1) 50%, rgba(240,153,125,1) 100%);
-  position: fixed;
-  
+  position: fixed;  
 }
 
 button {
@@ -98,10 +95,12 @@ img {
 }
 
 .card_layout {
-  width: 80vw; /* Adjusted width */
-  height: calc(100vh - 10rem); /* Adjusted height */
+  max-width: 80vw;
+  height: calc(100vh - 12rem); /* Adjusted height */
   color: white;
   display: grid;
+  align-items: center;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* Responsive grid columns */
   grid-template-rows: repeat(auto-fit, minmax(20rem, 2fr)); /* Responsive grid rows */
   row-gap: 5vh; /* Adjusted gap */
@@ -166,6 +165,8 @@ img {
   background-image: linear-gradient(163deg, #FFc300 0%, #FCF55F 100%);
   color: white;
   transform: rotateY(180deg);
+  overflow: contain;
+  padding: 5px;
 }
 
 .box--1 {
@@ -189,17 +190,17 @@ img {
 }
 
 .box--5 {
-  background: #1e1e2b;
+  background: #28285f;
   justify-self: center;
 }
 
 .box--6 {
-  background: #f3bbe1;
+  background: #e25fb9;
   justify-self: center;
 }
 
 .box--7 {
-    background: #f3bbe1;
+    background: #0ea057;
     justify-self: center;
   }
 
@@ -256,12 +257,14 @@ img {
 
 .wrapper {
   list-style: none;
-  height: calc(100vh - 20rem); /* Adjusted height */
-  padding-top: 16vh; /* Adjusted padding */
-  padding-left: 2vw; /* Adjusted padding */
+  /* Adjusted height */
+  padding-top: 20vh; /* Adjusted padding */
+  padding-left: 0.5vw; /* Adjusted padding */
   font-family: "Poppins", sans-serif;
   position: fixed;
   justify-content: center;
+  max-width: 20rem;
+  max-height: 20rem;
 }
 
 .wrapper .icon {
@@ -269,8 +272,8 @@ img {
   background: #fff;
   border-radius: 50%;
   margin: 2vh; /* Adjusted margin */
-  width: 8vh; /* Adjusted width */
-  height: 8vh; /* Adjusted height */
+  min-width: 7vh; /* Adjusted width */
+  min-height: 7vh; /* Adjusted height */
   font-size: 2.5vw; /* Adjusted font size */
   display: flex;
   justify-content: center;
@@ -283,8 +286,8 @@ img {
 
 .wrapper .tooltip {
   position: absolute;
-  top: 1vh; /* Adjusted top */
-  font-size: 2.5vh; /* Adjusted font size */
+  top: 1.5vh; /* Adjusted top */
+  font-size: 3.5vh; /* Adjusted font size */
   background: #fff;
   color: #fff;
   padding: 0.5vh 1vh; /* Adjusted padding */
@@ -293,6 +296,45 @@ img {
   opacity: 0;
   pointer-events: none;
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    /* Styles for mobile */
+    max-width: 15rem;
+    max-height: 15rem;
+  }
+  
+  .wrapper .icon {
+    /* Styles for mobile */
+    min-width: 5vh;
+    min-height: 5vh;
+    font-size: 4vw;
+  }
+  .wrapper .tooltip {
+    font-size: 2.8vh;
+    top: 1vh;
+  }
+}
+
+/* Media query for desktop */
+@media screen and (min-width: 768px) {
+  .wrapper {
+    /* Styles for desktop */
+    max-width: 30rem;
+    max-height: 30rem;
+  }
+  
+  .wrapper .icon {
+    /* Styles for desktop */
+    min-width: 10vh;
+    min-height: 10vh;
+    font-size: 2.5vw;
+  }
+
+  .wrapper .tooltip {
+    font-size: 4vh;
+  }
 }
 
 .wrapper .tooltip::before {
@@ -337,15 +379,29 @@ img {
 .wrapper .instagram:hover .tooltip,
 .wrapper .instagram:hover .tooltip::before {
   background: #FCF55F;
-  color: #ffffff;
+  color: #640606;
 }
 
 .flower {
-  height: 12vh; /* Adjusted height */
-  width: 12vh; /* Adjusted width */
+  height: 20vh; /* Adjusted height */
+  width: 20vh; /* Adjusted width */
   position: fixed;
-  right: 1vh; /* Adjusted left */
-  top: 0.5vh; /* Adjusted top */
+
+  bottom: 10vh; /* Adjusted top */
+  left: 0vh; /* Adjusted left */
+}
+
+@media screen and (max-width: 767px) {
+  .flower {
+    height: 15vh;
+    width: 15vh;
+  }
+}
+@media screen and (min-width: 767px) {
+  .flower {
+    height: 30vh;
+    width: 30vh;
+  }
 }
 
 .flower:hover {
@@ -366,12 +422,13 @@ img {
 }
 
 #daisisc {
-  height: 10rem;
-  width: 10rem;
+  height: 6rem;
+  width: 6rem;
   position: fixed;
-  padding: 1vh; /* Adjusted padding */
-  bottom: 10vh; /* Adjusted top */
-  left: 1vh; /* Adjusted left */
+  padding: 0.5vh; /* Adjusted padding */
+
+  right: 1vh; /* Adjusted left */
+  top: 0.5vh;
 }
 
 #daisisc.running {
